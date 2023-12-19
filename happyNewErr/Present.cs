@@ -3,11 +3,8 @@ using System.Drawing;
 
 public class Presents : ISmallPaint
 {
-    static Graphics graphics;
-    public void Paint()
+    public void Paint(Graphics graphics)
     {
-        graphics = Graphics.FromHwnd(Process.GetCurrentProcess().MainWindowHandle);
-
         graphics.FillPolygon(Brushes.CornflowerBlue, new Point[] {
             new Point(120, 220),
             new Point(150, 220),

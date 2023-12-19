@@ -2,11 +2,8 @@
 using System.Drawing;
 public class Yolochka: ISmallPaint
 {
-    static Graphics graphics;
-    public void Paint()
+    public void Paint(Graphics graphics)
     {
-        graphics = Graphics.FromHwnd(Process.GetCurrentProcess().MainWindowHandle);
-
         graphics.FillPolygon(Brushes.DarkOliveGreen, new Point[] {
             new Point(100, 70),
             new Point(120, 120),
